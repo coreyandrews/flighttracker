@@ -185,6 +185,7 @@ input, select, textarea {
 			color: #ffffff !important;
 		}
 
+		
 		a.special:not(.button) {
 			text-decoration: none;
 			border-bottom: 0;
@@ -4164,4 +4165,9 @@ input, select, textarea {
 
 	form.logbook {
 		margin: 0 0 0 0;
+	}
+
+	a.modifier {
+		border-bottom-color: transparent;
+
 	}

@@ -47,14 +47,14 @@
                                         <td>{{ $flight->dep_icao }}</td>
                                         <td>{{ $flight->arr_icao }}</td>
                                         <td>{{ $flight->aircraft_typ }}</td>
+                                        <td>{{ $flight->flt_time }}</td>
                                         <td>{{ $flight->altitude }}</td>
-                                        <td>{{ $flight->altitude }}</td>
-                                        <td><a href="/flightlog/{{ $flight->id }}/edit">Modify</a></td>
+                                        <td><a href="/flightlog/{{ $flight->id }}/edit" class="modifier"><i class="fa fa-cog"></i></a></td>
                                         <td><a href="flightlog/{{ $flight->id }}"
                                                 onclick="var result = confirm('Are you sure you want to delete this flight?'); 
                                                 if(result){ 
                                                 event.preventDefault(); 
-                                                document.getElementById('delete-form').submit();}">Delete</a>
+                                                document.getElementById('delete-form').submit();}" class="modifier"><i class="fa fa-close"></i></a>
                                         <form class="logbook" method="POST" id="delete-form"
                                             action="{{ route('flights.destroy', [$flight->id]) }}"> @csrf <input
                                                 type="hidden" name="_method" value="DELETE">
