@@ -16,8 +16,6 @@ class AppServiceProvider extends ServiceProvider
         //
     }
 
-    use Illuminate\Support\Facades\Schema;
-
     /**
      * Bootstrap any application services.
      *
@@ -25,6 +23,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Schema::defaultStringLength(191);
+        //
     }
 }
